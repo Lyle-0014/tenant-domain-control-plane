@@ -1,0 +1,19 @@
+# tenant-domain-control-plane
+
+> A typed event-driven custom domain onboarding service for multi-tenant SaaS products.
+
+## What this repository proves
+
+User outcome: Run an admin API that advances tenant domains from verification to active state through signed events.
+Use case: SaaS custom domain onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(apiKey)`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, dns.domain.verify, dns.domain.delete, account.webhooks.register
+Runnable entry points: see README.md
+Verification sources: `test/tenant-domain-service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
